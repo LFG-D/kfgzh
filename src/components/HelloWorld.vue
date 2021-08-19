@@ -1,7 +1,24 @@
 <template>
   <div class="hello">
     {{openid}}
-    这次的项目是桂林公众号的开发hhhhhhhh红红火火恍恍惚惚
+    这次的项目是桂林公众号的开发!!!
+    <el-divider></el-divider>
+
+    <el-button id="R1" class="R1" @click="reverseMessage1">跳转到LDM</el-button>
+
+    <el-divider></el-divider>
+
+    <el-button id="R2" class="R2" @click="reverseMessage2">跳转到LFG</el-button>
+
+    <el-divider></el-divider>
+
+    <el-button id="R3" class="R3" @click="reverseMessage3">跳转到LXT</el-button>
+
+    <el-divider></el-divider>
+
+    <el-button id="R4" class="R4" @click="reverseMessage4">跳转到LZL</el-button>
+
+    <el-divider></el-divider>
   </div>
 </template>
 
@@ -35,7 +52,27 @@
                 console.log(res);
                 this.openid=res.data.openid;
             });
+        },
+
+        methods:{
+            reverseMessage1(){
+                this.$router.push({path: "../ccgz"})
+
+            },
+            reverseMessage2(){
+                this.$router.push({path: "../Register"})
+
+            },
+            reverseMessage3(){
+                this.$router.push({path: "../AA"})
+
+            },
+            reverseMessage4(){
+                this.$router.push({path: "../gzsx"})
+
+            }
         }
+
     }
 </script>
 
